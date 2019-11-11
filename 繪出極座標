@@ -1,0 +1,5 @@
+t=0:0.1:10;
+vt=10*exp((-0.2+j*pi)*t);
+r=abs(vt);
+theta=angle(vt);
+polar(theta,r)

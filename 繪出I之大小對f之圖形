@@ -1,0 +1,25 @@
+f=100000:50000:10000000;
+vs=120;
+c=0.25e-9;
+l=0.1e-3;
+r=100;
+
+w=2*pi*f;
+
+io=vs./(r+j*2*pi*f*l-j./(2*pi*f*c));
+
+phase = angle(io)*180/pi;
+
+figure(1);
+subplot(2,1,1);
+semilogx(f,abs(io),'LineWidth',2);
+title('\bfplot of amplitude of current flow vs frequency');
+ylabel('\bfAumpitude(A)');
+grid on;
+
+subplot(2,1,2);
+semilogx(f,phase,'LineWidth',2);
+title('\bfplot of phase of current flow vs frequency');
+xlabel('\bfFrequency(Hz)');
+ylabel('\bfPhase (Deg)');
+grid on;

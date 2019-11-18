@@ -1,0 +1,4 @@
+%產生一單元陣列(cell array),將A{1,1}與A{1,2}相加後置於A{3,1}並show最後的A
+clear all; close all;
+A={[1 2;3 4],[i 2i;3i 4i];'text','k'};
+A{3,1}=A{1,1}+A{1,2}

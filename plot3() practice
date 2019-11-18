@@ -1,0 +1,9 @@
+%用plot3()繪出r(t)=10*e^[(-0.2+j*pi)*t] t=0~10 繪出r(t)之實部,虛部對時間t之關係
+clear all; close all;
+t=0:0.1:10;
+rt=10*exp((-0.2+j*pi).*t);
+plot3(real(rt),imag(rt),t);
+grid on;
+xlabel('\bfreal');
+ylabel('\bfimaginary');
+zlabel('\bftime');

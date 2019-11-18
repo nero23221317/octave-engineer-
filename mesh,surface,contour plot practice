@@ -1,0 +1,23 @@
+%繪出z=e^(x+iy) 之z之實部對x y之mesh,surface & contour plot x=-1~1,y=-2*pi~2*pi
+clear all; close all;
+[x y]=meshgrid(-1:0.05:1,-2*pi:pi/20:2*pi);
+z=exp(x+i.*y);
+mesh(x,y,real(z));
+title('\bfMesh plot of real(\itz\rm\bf),where \it z = e^(x+iy)');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
+
+figure;
+surf(x,y,real(z));
+title('\bfSurface plot of real(\itz\rm\bf),where \it z = e^(x+iy)');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
+
+figure;
+contour(x,y,real(z));
+title('\bfContour plot of real(\itz\rm\bf),where \it z = e^(x+iy)');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
